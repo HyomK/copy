@@ -6,9 +6,6 @@
 #include "data_structure.h"
 
 
-std::vector<User> userObjs;
-std::vector<Metro> metroObjs;
-
 std::map<int, User> userMap;
 std::map<int, Metro> metroMap;
 
@@ -50,11 +47,11 @@ UserTreeNode* read_user_data()
 		for(auto user : userData) {
 			std::string name = user["name"].asString();
 			int id = user["id"].asInt(); 
-			int main_station_code = user["main_station_code"].asInt();
+			int station_code = user["station_code"].asInt();
 
-			User userObj = User(name, main_station_code);
+			User userObj = User(name, station_code);
 
-			for(auto schedule : user["my_schedule"]) {
+			for(auto schedule : user["schedule"]) {
 				std::string name = schedule["name"].asString();
 				int start_time = schedule["start_time"].asInt(); 
 				int end_time = schedule["end_time"].asInt(); 
@@ -111,6 +108,18 @@ MetroTreeNode* read_metro_data()
 	return temp;
 }
 
+void save_user_data() {
+	Json::Value root;
+
+	for(auto pair : userMap) {
+		User userObj = pair.second;
+
+		Json::Value jsonObj;
+		
+		
+	}
+}
+
 int main() {
 	read_user_data();
 	read_metro_data();
@@ -120,6 +129,8 @@ int main() {
 
 	find_item(userMap, "James");
 	find_item(metroMap, "고속버스터미널");
+
+	//save_user_data();
 
 	return 0;
 }
