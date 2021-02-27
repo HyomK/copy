@@ -20,12 +20,6 @@ JSON파일 읽고 User Object들로 만든다.
 */
 
 template <typename T>
-void init_map(std::map<int, T>& map, std::vector<T>& objs) {
-	for(auto obj : objs) 
-		map.insert(std::pair<int, T>(obj.get_id(), obj));
-}
-
-template <typename T>
 void travel_map(std::map<int, T>& map) {
 	for(auto obj : map)
 		cout << obj.first << " >> ";	
@@ -70,17 +64,12 @@ UserTreeNode* read_user_data()
 				userObj.insert_schedule(scheduleObj);
 			}
 
-			userObjs.push_back(userObj);
+			userMap.insert(std::pair<int, User>(userObj.get_id(), userObj));
 		}
 	}
 	else
 		std::cerr << "Failed to parse Json";
 	
-//	for(auto obj : userObjs) {
-//		obj.print();
-//		obj.print_my_schedule();
-//	}
-
 	UserTreeNode* temp;
 	return temp;
 }
@@ -112,17 +101,12 @@ MetroTreeNode* read_metro_data()
 				metroObj.insert_departure_info(scheduleObj);
 			}
 
-			metroObjs.push_back(metroObj);
+			metroMap.insert(std::pair<int, Metro>(metroObj.get_id(), metroObj));
 		}
 	}
 	else
 		std::cerr << "Failed to parse Json";
 	
-//	for(auto obj : metroObjs) {
-//		obj.print();
-//	}
-
-    // metro 파일을 읽어 tree구조로 저장한다.
 	MetroTreeNode* temp;
 	return temp;
 }
@@ -131,16 +115,11 @@ int main() {
 	read_user_data();
 	read_metro_data();
 
-	init_map(userMap, userObjs);
-	init_map(metroMap, metroObjs);
-
-	travel_map(metroMap);
 	travel_map(userMap);
-
+	travel_map(metroMap);
 
 	find_item(userMap, "James");
 	find_item(metroMap, "고속버스터미널");
-	
 
 	return 0;
 }

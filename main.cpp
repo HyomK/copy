@@ -2,7 +2,7 @@
 #include<string>
 //#include "objects.h"
 //#include "data_structure.h"
-#include "file_read.h"
+#include "file_manage.h"
 using namespace std;
 
 const int NUM_OF_STATION = 100;
