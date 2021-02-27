@@ -32,7 +32,7 @@ User::User(string param_string, int param_main_station_code)
 	// 생성자 코드, id는 string hash로 할당해주기
 	this->name = param_string;
 	this->id = hash<string>{}(param_string);
-	this->main_station_code = param_main_station_code;
+	this->station_code = param_main_station_code;
 }
 void User::print()
 {
@@ -40,20 +40,20 @@ void User::print()
 	cout << "[User Info]" << endl;
 	cout << this->name << endl;
 	cout << this->id << endl;
-	cout << this->main_station_code << endl;
+	cout << this->station_code << endl;
 }           
 
 void User::insert_schedule(Schedule schedule)
 {
-	this->my_schedule.push_back(schedule);
+	this->schedule.push_back(schedule);
 	// 스케쥴 삽입
 }
 
 void User::print_my_schedule()
 {
 	// 자신의 모든 스케쥴 출력
-	for(auto schedule : this->my_schedule) {
-		schedule.print_schedule();
+	for(auto eachSchedule : this->schedule) {
+		eachSchedule.print_schedule();
 	}
 }
 

@@ -25,8 +25,8 @@ class User
     private :
         string name; // 유저 이름
         int id; // 유저 아이디
-        int main_station_code; // 유저의 역, 스케쥴의 언제나 맨 처음이고 언제나 맨 마지막이다. 변하면 안됨
-        list<Schedule> my_schedule; // 스케쥴의 백터
+        int station_code; // 유저의 역, 스케쥴의 언제나 맨 처음이고 언제나 맨 마지막이다. 변하면 안됨
+        list<Schedule> schedule; // 스케쥴의 백터
     public :
         User(string param_string, int param_main_station_code);
         void print();
