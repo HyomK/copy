@@ -17,7 +17,10 @@ class Schedule
         int station_code; // 역 코드
     public :
         Schedule(string param_name, int param_start_time, int param_end_time, int param_station_code);
-        void print_schedule();
+		int get_start_time;
+		int get_end_time;
+		int get_station_code;
+        void print();
 };
 
 class User
@@ -26,13 +29,15 @@ class User
         string name; // 유저 이름
         int id; // 유저 아이디
         int station_code; // 유저의 역, 스케쥴의 언제나 맨 처음이고 언제나 맨 마지막이다. 변하면 안됨
-        list<Schedule> schedule; // 스케쥴의 백터
+        list<Schedule> schedule_list; // 스케쥴의 백터
     public :
         User(string param_string, int param_main_station_code);
+		string get_name();
+		int get_id();
+		int get_station_code();
+		list<Schedule> get_schedule_list();
         void print();
         void insert_schedule(Schedule schedule);
-		int get_id();
-        void print_my_schedule();
         string find_optimized_schedule_path();
 };
 
@@ -44,6 +49,9 @@ class Departure
 		int departure_time;
 	public:	
         Departure(int destination_code, int line, int departure_time);
+		int get_destination_code;
+		int get_line;
+		int get_departure_time;
         void print();
 };
 
@@ -52,13 +60,15 @@ class Metro
     private :
         string station_name;
         int station_code;
-		list<Departure> departure_info_list;
+		list<Departure> departure_list;
         //vector<array<int,3>> departure_time;
     public :
         Metro(string param_station_name, int param_station_code);
-        int find_maximum_time(int param_time);
 		int get_id();
-		void insert_departure_info(Departure departure_info);
+		int get_station_code();
+		int get_departure_list();
+        int find_maximum_time(int param_time);
+		void insert_departure(Departure departure);
 		void print();
 };
 

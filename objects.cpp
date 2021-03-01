@@ -15,7 +15,7 @@ Schedule::Schedule(string param_name, int param_start_time, int param_end_time, 
 	this->station_code = param_station_code;
 }
 
-void Schedule::print_schedule()
+void Schedule::print()
 {
 	// 스케쥴 프린트
 	cout << "[Schedule]" << endl;
@@ -41,20 +41,16 @@ void User::print()
 	cout << this->name << endl;
 	cout << this->id << endl;
 	cout << this->station_code << endl;
+	for(Schedule schedule : schedule_list) {
+		cout << "\t";
+		schedule.print();
+	}
 }           
 
 void User::insert_schedule(Schedule schedule)
 {
-	this->schedule.push_back(schedule);
+	this->schedule_list.push_back(schedule);
 	// 스케쥴 삽입
-}
-
-void User::print_my_schedule()
-{
-	// 자신의 모든 스케쥴 출력
-	for(auto eachSchedule : this->schedule) {
-		eachSchedule.print_schedule();
-	}
 }
 
 int User::get_id()
@@ -76,18 +72,18 @@ int Metro::find_maximum_time(int param_time)
 	// param_time보다 같거나 큰 departure_time 중 가장 가까운 값 리턴
 	return 0;
 }
-int Metro::get_id() {
+int Metro::get_station_code() {
 	return this->station_code;	
 }
-void Metro::insert_departure_info(Departure departure_info)
+void Metro::insert_departure(Departure departure)
 {
-	this->departure_info_list.push_back(departure_info);	
+	this->departure_list.push_back(departure);	
 }
 void Metro::print() {
 	cout << "[Metro]" << endl;
 	cout << station_name << endl;
 	cout << station_code << endl;
-	for(auto departure_info : this->departure_info_list) {
+	for(auto departure_info : this->departure_list) {
 		departure_info.print();
 	}
 }
