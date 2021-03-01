@@ -90,7 +90,7 @@ MetroTreeNode* read_metro_data()
 			Metro metroObj = Metro(station_name, station_code);
 
 			for(auto departure : metro["departure_list"]) {
-				int destination_code = departure["destination_code"].asInt(); 
+				int destination_code = departure["station_code"].asInt(); 
 				int line = departure["line"].asInt(); 
 				int departure_time = departure["departure_time"].asInt();
 
@@ -98,7 +98,7 @@ MetroTreeNode* read_metro_data()
 				metroObj.insert_departure(scheduleObj);
 			}
 
-			metroMap.insert(std::pair<int, Metro>(metroObj.get_id(), metroObj));
+			metroMap.insert(std::pair<int, Metro>(metroObj.get_station_code(), metroObj));
 		}
 	}
 	else
@@ -120,18 +120,18 @@ void save_user_data() {
 	}
 }
 
-void save_metro_data() {
-	Json::Value root;
-
-	for(auto metroPair : userMap) {
-		User metroObj = metroPair.second;
-
-		Json::Value metroValue;
-		metroValue["station_name"] = metroObj.get_station_code();
-		
-		
-	}
-}
+//void save_metro_data(UserTreeNode* rootNode) {
+//	Json::Value root;
+//
+//	for(auto metroPair : userMap) {
+//		User metroObj = metroPair.second;
+//
+//		Json::Value metroValue;
+//		metroValue["station_name"] = metroObj.get_station_code();
+//		
+//		
+//	}
+//}
 
 
 int main() {
@@ -142,7 +142,7 @@ int main() {
 	travel_map(metroMap);
 
 	find_item(userMap, "James");
-	find_item(metroMap, "고속버스터미널");
+	find_item(metroMap, "고속터미널");
 
 	//save_user_data();
 
