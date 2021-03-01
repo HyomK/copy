@@ -3,7 +3,7 @@
         "name" : "안종훈",
         "id" : 1,
         "station_code" : 1,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "알바",
                 "start_time" : 1200,
@@ -22,7 +22,7 @@
         "name" : "김효민",
         "id" : 2,
         "station_code" : 2,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "멘토링",
                 "start_time" : 900,
@@ -35,7 +35,7 @@
         "name" : "박상욱",
         "id" : 3,
         "station_code" : 1,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "수업",
                 "start_time" : 1500,
@@ -48,7 +48,7 @@
         "name" : "James",
         "id" : 1,
         "station_code" : 1,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "알바",
                 "start_time" : 1200,
@@ -67,7 +67,7 @@
         "name" : "Tom",
         "id" : 2,
         "station_code" : 2,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "멘토링",
                 "start_time" : 900,
@@ -80,7 +80,7 @@
         "name" : "Justin",
         "id" : 3,
         "station_code" : 1,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "수업",
                 "start_time" : 1500,
@@ -93,7 +93,7 @@
         "name" : "Anne",
         "id" : 1,
         "station_code" : 1,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "알바",
                 "start_time" : 1200,
@@ -112,7 +112,7 @@
         "name" : "Julia",
         "id" : 2,
         "station_code" : 2,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "멘토링",
                 "start_time" : 900,
@@ -125,7 +125,7 @@
         "name" : "Vein",
         "id" : 3,
         "station_code" : 1,
-        "schedule" : [
+        "schedules" : [
             {
                 "name" : "수업",
                 "start_time" : 1500,
