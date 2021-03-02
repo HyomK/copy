@@ -1,22 +1,18 @@
 [
     {
        "station_name":"서울역",
-       "station_code":1,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"시청",
              "line":1,
              "departure_time":900
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":1,
              "departure_time":1000
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":1,
              "departure_time":1100
@@ -25,64 +21,53 @@
     },
     {
        "station_name":"시청",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"종각",
              "line":1,
              "departure_time":902
           },
           {
-             "station_code":2,
              "station_name":"종각",
              "line":1,
              "departure_time":1002
           },
           {
-             "station_code":2,
              "station_name":"종각",
              "line":1,
              "departure_time":1102
           },
           {
-             "station_code":2,
              "station_name":"서울역",
              "line":1,
              "departure_time":928
           },
           {
-             "station_code":2,
              "station_name":"서울역",
              "line":1,
              "departure_time":1028
           },
           {
-             "station_code":2,
              "station_name":"사당",
              "line":2,
              "departure_time":944
           },
           {
-             "station_code":2,
              "station_name":"사당",
              "line":2,
              "departure_time":1044
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":2,
              "departure_time":930
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":2,
              "departure_time":1030
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":2,
              "departure_time":1130
@@ -91,34 +76,28 @@
     },
     {
        "station_name":"종각",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"종로3가",
              "line":1,
              "departure_time":905
           },
           {
-             "station_code":2,
              "station_name":"종로3가",
              "line":1,
              "departure_time":1005
           },
           {
-             "station_code":2,
              "station_name":"종로3가",
              "line":1,
              "departure_time":1105
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":1,
              "departure_time":926
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":1,
              "departure_time":1026
@@ -127,34 +106,28 @@
     },
     {
        "station_name":"종로3가",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"종로5가",
              "line":1,
              "departure_time":906
           },
           {
-             "station_code":2,
              "station_name":"종로5가",
              "line":1,
              "departure_time":1006
           },
           {
-             "station_code":2,
              "station_name":"종로5가",
              "line":1,
              "departure_time":1106
           },
           {
-             "station_code":2,
              "station_name":"종각",
              "line":1,
              "departure_time":924
           },
           {
-             "station_code":2,
              "station_name":"종각",
              "line":1,
              "departure_time":1024
@@ -163,34 +136,28 @@
     },
     {
        "station_name":"종로5가",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"동대문",
              "line":1,
              "departure_time":908
           },
           {
-             "station_code":2,
              "station_name":"동대문",
              "line":1,
              "departure_time":1008
           },
           {
-             "station_code":2,
              "station_name":"동대문",
              "line":1,
              "departure_time":1108
           },
           {
-             "station_code":2,
              "station_name":"종로3가",
              "line":1,
              "departure_time":922
           },
           {
-             "station_code":2,
              "station_name":"종로3가",
              "line":1,
              "departure_time":1022
@@ -199,34 +166,28 @@
     },
     {
        "station_name":"동대문",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"신설동",
              "line":1,
              "departure_time":910
           },
           {
-             "station_code":2,
              "station_name":"신설동",
              "line":1,
              "departure_time":1010
           },
           {
-             "station_code":2,
              "station_name":"신설동",
              "line":1,
              "departure_time":1110
           },
           {
-             "station_code":2,
              "station_name":"종로5가",
              "line":1,
              "departure_time":920
           },
           {
-             "station_code":2,
              "station_name":"종로5가",
              "line":1,
              "departure_time":1020
@@ -235,34 +196,28 @@
     },
     {
        "station_name":"신설동",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"청량리",
              "line":1,
              "departure_time":912
           },
           {
-             "station_code":2,
              "station_name":"청량리",
              "line":1,
              "departure_time":1012
           },
           {
-             "station_code":2,
              "station_name":"청량리",
              "line":1,
              "departure_time":1112
           },
           {
-             "station_code":2,
              "station_name":"동대문",
              "line":1,
              "departure_time":918
           },
           {
-             "station_code":2,
              "station_name":"동대문",
              "line":1,
              "departure_time":1018
@@ -271,16 +226,13 @@
     },
     {
        "station_name":"청량리",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"신설동",
              "line":1,
              "departure_time":915
           },
           {
-             "station_code":2,
              "station_name":"신설동",
              "line":1,
              "departure_time":1015
@@ -289,64 +241,53 @@
     },
     {
        "station_name":"을지로3가",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"동대문운동장",
              "line":2,
              "departure_time":932
           },
           {
-             "station_code":2,
              "station_name":"동대문운동장",
              "line":2,
              "departure_time":1032
           },
           {
-             "station_code":2,
              "station_name":"동대문운동장",
              "line":2,
              "departure_time":1132
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":2,
              "departure_time":958
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":2,
              "departure_time":1058
           },
           {
-             "station_code":2,
              "station_name":"충무로",
              "line":3,
              "departure_time":948
           },
           {
-             "station_code":2,
              "station_name":"충무로",
              "line":3,
              "departure_time":1048
           },
           {
-             "station_code":2,
              "station_name":"충무로",
              "line":3,
              "departure_time":1148
           },
           {
-             "station_code":2,
              "station_name":"홍제",
              "line":3,
              "departure_time":1016
           },
           {
-             "station_code":2,
              "station_name":"홍제",
              "line":3,
              "departure_time":1116
@@ -355,34 +296,28 @@
     },
     {
        "station_name":"동대문운동장",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"건대입구",
              "line":2,
              "departure_time":934
           },
           {
-             "station_code":2,
              "station_name":"건대입구",
              "line":2,
              "departure_time":1034
           },
           {
-             "station_code":2,
              "station_name":"건대입구",
              "line":2,
              "departure_time":1134
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":2,
              "departure_time":955
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":2,
              "departure_time":1055
@@ -391,34 +326,28 @@
     },
     {
        "station_name":"건대입구",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"잠실",
              "line":2,
              "departure_time":936
           },
           {
-             "station_code":2,
              "station_name":"잠실",
              "line":2,
              "departure_time":1036
           },
           {
-             "station_code":2,
              "station_name":"잠실",
              "line":2,
              "departure_time":1136
           },
           {
-             "station_code":2,
              "station_name":"동대문운동장",
              "line":2,
              "departure_time":952
           },
           {
-             "station_code":2,
              "station_name":"동대문운동장",
              "line":2,
              "departure_time":1052
@@ -427,34 +356,28 @@
     },
     {
        "station_name":"잠실",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"교대",
              "line":2,
              "departure_time":938
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":2,
              "departure_time":1038
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":2,
              "departure_time":1138
           },
           {
-             "station_code":2,
              "station_name":"건대입구",
              "line":2,
              "departure_time":950
           },
           {
-             "station_code":2,
              "station_name":"건대입구",
              "line":2,
              "departure_time":1050
@@ -463,64 +386,53 @@
     },
     {
        "station_name":"교대",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"사당",
              "line":2,
              "departure_time":940
           },
           {
-             "station_code":2,
              "station_name":"사당",
              "line":2,
              "departure_time":1040
           },
           {
-             "station_code":2,
              "station_name":"사당",
              "line":2,
              "departure_time":1140
           },
           {
-             "station_code":2,
              "station_name":"잠실",
              "line":2,
              "departure_time":947
           },
           {
-             "station_code":2,
              "station_name":"잠실",
              "line":2,
              "departure_time":1047
           },
           {
-             "station_code":2,
              "station_name":"남부터미널",
              "line":3,
              "departure_time":955
           },
           {
-             "station_code":2,
              "station_name":"남부터미널",
              "line":3,
              "departure_time":1055
           },
           {
-             "station_code":2,
              "station_name":"남부터미널",
              "line":3,
              "departure_time":1155
           },
           {
-             "station_code":2,
              "station_name":"고속터미널",
              "line":3,
              "departure_time":1006
           },
           {
-             "station_code":2,
              "station_name":"고속터미널",
              "line":3,
              "departure_time":1106
@@ -529,34 +441,28 @@
     },
     {
        "station_name":"사당",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"시청",
              "line":2,
              "departure_time":943
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":2,
              "departure_time":1043
           },
           {
-             "station_code":2,
              "station_name":"시청",
              "line":2,
              "departure_time":1143
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":2,
              "departure_time":945
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":2,
              "departure_time":1045
@@ -565,22 +471,18 @@
     },
     {
        "station_name":"지축",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"홍제",
              "line":3,
              "departure_time":943
           },
           {
-             "station_code":2,
              "station_name":"홍제",
              "line":3,
              "departure_time":1043
           },
           {
-             "station_code":2,
              "station_name":"홍제",
              "line":3,
              "departure_time":1143
@@ -589,34 +491,28 @@
     },
     {
        "station_name":"홍제",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":3,
              "departure_time":946
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":3,
              "departure_time":1046
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":3,
              "departure_time":1146
           },
           {
-             "station_code":2,
              "station_name":"지축",
              "line":3,
              "departure_time":1018
           },
           {
-             "station_code":2,
              "station_name":"지축",
              "line":3,
              "departure_time":1118
@@ -625,34 +521,28 @@
     },
     {
        "station_name":"충무로",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"고속터미널",
              "line":3,
              "departure_time":950
           },
           {
-             "station_code":2,
              "station_name":"고속터미널",
              "line":3,
              "departure_time":1050
           },
           {
-             "station_code":2,
              "station_name":"고속터미널",
              "line":3,
              "departure_time":1150
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":3,
              "departure_time":1012
           },
           {
-             "station_code":2,
              "station_name":"을지로3가",
              "line":3,
              "departure_time":1112
@@ -661,34 +551,28 @@
     },
     {
        "station_name":"고속터미널",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"교대",
              "line":3,
              "departure_time":953
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":3,
              "departure_time":1053
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":3,
              "departure_time":1153
           },
           {
-             "station_code":2,
              "station_name":"충무로",
              "line":3,
              "departure_time":1010
           },
           {
-             "station_code":2,
              "station_name":"충무로",
              "line":3,
              "departure_time":1110
@@ -697,34 +581,28 @@
     },
     {
        "station_name":"남부터미널",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"양재",
              "line":3,
              "departure_time":957
           },
           {
-             "station_code":2,
              "station_name":"양재",
              "line":3,
              "departure_time":1057
           },
           {
-             "station_code":2,
              "station_name":"양재",
              "line":3,
              "departure_time":1157
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":3,
              "departure_time":1004
           },
           {
-             "station_code":2,
              "station_name":"교대",
              "line":3,
              "departure_time":1104
@@ -733,34 +611,28 @@
     },
     {
        "station_name":"앙재",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"수서",
              "line":3,
              "departure_time":959
           },
           {
-             "station_code":2,
              "station_name":"수서",
              "line":3,
              "departure_time":1059
           },
           {
-             "station_code":2,
              "station_name":"수서",
              "line":3,
              "departure_time":1159
           },
           {
-             "station_code":2,
              "station_name":"남부터미널",
              "line":3,
              "departure_time":1002
           },
           {
-             "station_code":2,
              "station_name":"남부터미널",
              "line":3,
              "departure_time":1102
@@ -769,16 +641,13 @@
     },
     {
        "station_name":"수서",
-       "station_code":2,
        "departure_list":[
           {
-             "station_code":2,
              "station_name":"양재",
              "line":3,
              "departure_time":1000
           },
           {
-             "station_code":2,
              "station_name":"양재",
              "line":3,
              "departure_time":1100

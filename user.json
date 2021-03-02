@@ -1,136 +1,43 @@
 [
     {
         "name" : "안종훈",
-        "id" : 1,
-        "station_code" : 1,
-        "schedules" : [
+        "station_name" : "서울역",
+        "schedule_list" : [
             {
                 "name" : "알바",
                 "start_time" : 1200,
                 "end_time" : 1300,
-                "station_code" : 2
+                "station_name" : "시청"
             },
             {
                 "name" : "수업",
                 "start_time" : 1400,
                 "end_time" : 1500,
-                "station_code" : 3
+                "station_name" : "종로5가"
             }
         ]
-    },
-    {
+    }, 
+	{
         "name" : "김효민",
-        "id" : 2,
-        "station_code" : 2,
-        "schedules" : [
+        "station_name" : "종각",
+        "schedule_list" : [
             {
                 "name" : "멘토링",
                 "start_time" : 900,
                 "end_time" : 1200,
-                "station_code" : 1
+                "station_name" : "서울역"
             }
         ]
     },
     {
         "name" : "박상욱",
-        "id" : 3,
-        "station_code" : 1,
-        "schedules" : [
+        "station_name" : "사당",
+        "schedule_list" : [
             {
                 "name" : "수업",
                 "start_time" : 1500,
                 "end_time" : 1700,
-                "station_code" : 2
-            }
-        ]
-    }, 
-    {
-        "name" : "James",
-        "id" : 1,
-        "station_code" : 1,
-        "schedules" : [
-            {
-                "name" : "알바",
-                "start_time" : 1200,
-                "end_time" : 1300,
-                "station_code" : 2
-            },
-            {
-                "name" : "수업",
-                "start_time" : 1400,
-                "end_time" : 1500,
-                "station_code" : 3
-            }
-        ]
-    },
-    {
-        "name" : "Tom",
-        "id" : 2,
-        "station_code" : 2,
-        "schedules" : [
-            {
-                "name" : "멘토링",
-                "start_time" : 900,
-                "end_time" : 1200,
-                "station_code" : 1
-            }
-        ]
-    },
-    {
-        "name" : "Justin",
-        "id" : 3,
-        "station_code" : 1,
-        "schedules" : [
-            {
-                "name" : "수업",
-                "start_time" : 1500,
-                "end_time" : 1700,
-                "station_code" : 2
-            }
-        ]
-    }, 
-    {
-        "name" : "Anne",
-        "id" : 1,
-        "station_code" : 1,
-        "schedules" : [
-            {
-                "name" : "알바",
-                "start_time" : 1200,
-                "end_time" : 1300,
-                "station_code" : 2
-            },
-            {
-                "name" : "수업",
-                "start_time" : 1400,
-                "end_time" : 1500,
-                "station_code" : 3
-            }
-        ]
-    },
-    {
-        "name" : "Julia",
-        "id" : 2,
-        "station_code" : 2,
-        "schedules" : [
-            {
-                "name" : "멘토링",
-                "start_time" : 900,
-                "end_time" : 1200,
-                "station_code" : 1
-            }
-        ]
-    },
-    {
-        "name" : "Vein",
-        "id" : 3,
-        "station_code" : 1,
-        "schedules" : [
-            {
-                "name" : "수업",
-                "start_time" : 1500,
-                "end_time" : 1700,
-                "station_code" : 2
+                "station_name" : "을지로3가"
             }
         ]
     } 
