@@ -4,10 +4,8 @@
 #include <vector>
 #include "json/json.h"
 #include "data_structure.h"
+#include "file_manager.h"
 
-
-std::map<int, User> userMap;
-std::map<int, Metro> metroMap;
 
 /* 
 JSON파일 읽고 User Object들로 만든다. 
@@ -16,22 +14,8 @@ JSON파일 읽고 User Object들로 만든다.
     (힌트 2. Custom tree를 구현하기 전에 STL의 map을 이용하여 미리 구현하면 협업이 쉬울것이다.)
 */
 
-template <typename T>
-void travel_map(std::map<int, T>& map) {
-	for(auto obj : map)
-		cout << obj.first << " >> ";	
-	cout << endl;
-}
-
-template <typename T>
-void find_item(std::map<int, T>& map, string item) {
-	int id=hash<string>{}(item);
-	typename std::map<int, T>::iterator it = map.find(id);
-	if(it != map.end()) {
-		it->second.print();
-	} else 
-		cout << "can't find" << endl;
-}
+std::map<int, User> userMap;
+std::map<int, Metro> metroMap;
 
 UserTreeNode* read_user_data()
 {
@@ -132,22 +116,5 @@ void save_user_data() {
 //		
 //	}
 //}
-
-
-int main() {
-	read_user_data();
-	read_metro_data();
-
-	travel_map(userMap);
-	travel_map(metroMap);
-
-	find_item(userMap, "James");
-	find_item(metroMap, "고속터미널");
-
-	//save_user_data();
-
-	return 0;
-}
-
 
 

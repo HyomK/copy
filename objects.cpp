@@ -42,7 +42,6 @@ void User::print()
 	cout << this->id << endl;
 	cout << this->station_code << endl;
 	for(Schedule schedule : schedule_list) {
-		cout << "\t";
 		schedule.print();
 	}
 }           
