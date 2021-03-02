@@ -6,33 +6,66 @@ using namespace std;
 
 // Schedule Class
 
-Schedule::Schedule(string param_name, int param_start_time, int param_end_time, int param_station_code)
+Schedule::Schedule(string param_name, int param_start_time, int param_end_time, string param_station_name)
 {
 	// 생성자 코드
 	this->name = param_name;
+	this->id = hash<string>{}(param_name);
 	this->start_time = param_start_time;
 	this->end_time = param_end_time;
-	this->station_code = param_station_code;
+	this->station_name = param_station_name;
 }
-
+string Schedule::get_name() { 
+	return this->name;	
+}
+int Schedule::get_id() {
+	return this->id;
+}
+int Schedule::get_start_time() {
+	return this->start_time;	
+}
+int Schedule::get_end_time() {
+	return this->end_time;	
+}
+string Schedule::get_station_name() {
+	return this->station_name;	
+}
 void Schedule::print()
 {
 	// 스케쥴 프린트
 	cout << "[Schedule]" << endl;
 	cout << this->name << endl;
+	cout << this->id << endl;
 	cout << this->start_time << endl;
 	cout << this->end_time << endl;
-	cout << this->station_code << endl;
+	cout << this->station_name << endl;
 }
 
 // User Class
 
-User::User(string param_string, int param_main_station_code)
+User::User(string param_string, string param_main_station_name)
 {
 	// 생성자 코드, id는 string hash로 할당해주기
 	this->name = param_string;
 	this->id = hash<string>{}(param_string);
-	this->station_code = param_main_station_code;
+	this->station_name = param_main_station_name;
+}
+string User::get_name() {
+	return this->name;
+}
+string User::get_station_name() {
+	return this->station_name;
+}
+int User::get_id() {
+	return this->id;
+}
+list<Schedule> User::get_schedule_list() {
+	return this->schedule_list;
+}
+void User::insert_schedule(Schedule schedule)
+{
+	this->schedule_list.push_back(schedule);
+	// 스케쥴 삽입
 }
 void User::print()
 {
@@ -40,23 +73,11 @@ void User::print()
 	cout << "[User Info]" << endl;
 	cout << this->name << endl;
 	cout << this->id << endl;
-	cout << this->station_code << endl;
+	cout << this->station_name << endl;
 	for(Schedule schedule : schedule_list) {
 		schedule.print();
 	}
 }           
-
-void User::insert_schedule(Schedule schedule)
-{
-	this->schedule_list.push_back(schedule);
-	// 스케쥴 삽입
-}
-
-int User::get_id()
-{
-	return this->id;	
-}
-
 
 // Metro Class
 
@@ -64,24 +85,30 @@ Metro::Metro(string param_station_name, int param_station_code)
 {
 	// 생성자
 	this->station_name = param_station_name;
-	this->station_code = hash<string>{}(param_station_name);
+	this->id = hash<string>{}(param_station_name);
+}
+string Metro::get_station_name() {
+	return this->station_name;
+}
+int Metro::get_id() {
+	return this->id;	
+}
+list<Departure> Metro::get_departure_list() {
+	return this-> departure_list;
+}
+void Metro::insert_departure(Departure departure)
+{
+	this->departure_list.push_back(departure);	
 }
 int Metro::find_maximum_time(int param_time)
 {
 	// param_time보다 같거나 큰 departure_time 중 가장 가까운 값 리턴
 	return 0;
 }
-int Metro::get_station_code() {
-	return this->station_code;	
-}
-void Metro::insert_departure(Departure departure)
-{
-	this->departure_list.push_back(departure);	
-}
 void Metro::print() {
 	cout << "[Metro]" << endl;
 	cout << station_name << endl;
-	cout << station_code << endl;
+	cout << id << endl;
 	for(auto departure_info : this->departure_list) {
 		departure_info.print();
 	}
@@ -89,16 +116,29 @@ void Metro::print() {
 
 // Departure Class
 
-Departure::Departure(int destination_code, int line, int departure_time)
+Departure::Departure(string station_name, int line, int departure_time)
 {
-	this->destination_code = destination_code;
+	this->station_name = station_name;
+	this->id = hash<string>{}(station_name);
 	this->line = line;
 	this->departure_time = departure_time;
 };
-
+string Departure::get_station_name() {
+	return this->station_name;	
+}
+int Departure::get_id() {
+	return this->id;	
+}
+int Departure::get_line() {
+	return this->line;	
+}
+int Departure::get_departure_time() {
+	return this->departure_time;	
+}
 void Departure::print() {
 	cout << "[Departure]" << endl;	
-	cout << destination_code << endl;
+	cout << station_name << endl;
+	cout << id << endl;
 	cout << line << endl;
 	cout << departure_time << endl;
 }

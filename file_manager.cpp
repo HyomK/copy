@@ -30,18 +30,17 @@ UserTreeNode* read_user_data()
 
 		for(auto user : userData) {
 			std::string name = user["name"].asString();
-			int id = user["id"].asInt(); 
-			int station_code = user["station_code"].asInt();
+			std::string station_name = user["station_name"].asString();
 
-			User userObj = User(name, station_code);
+			User userObj = User(name, station_name);
 
-			for(auto schedule : user["schedules"]) {
+			for(auto schedule : user["schedule_list"]) {
 				std::string name = schedule["name"].asString();
 				int start_time = schedule["start_time"].asInt(); 
 				int end_time = schedule["end_time"].asInt(); 
-				int station_code = schedule["station_code"].asInt();
+				std::string station_name = schedule["station_name"].asString();
 
-				Schedule scheduleObj = Schedule(name, start_time, end_time, station_code);
+				Schedule scheduleObj = Schedule(name, start_time, end_time, station_name);
 				userObj.insert_schedule(scheduleObj);
 			}
 
@@ -74,15 +73,15 @@ MetroTreeNode* read_metro_data()
 			Metro metroObj = Metro(station_name, station_code);
 
 			for(auto departure : metro["departure_list"]) {
-				int destination_code = departure["station_code"].asInt(); 
+				string station_name = departure["station_name"].asString(); 
 				int line = departure["line"].asInt(); 
 				int departure_time = departure["departure_time"].asInt();
 
-				Departure scheduleObj = Departure(destination_code, line, departure_time);
+				Departure scheduleObj = Departure(station_name, line, departure_time);
 				metroObj.insert_departure(scheduleObj);
 			}
 
-			metroMap.insert(std::pair<int, Metro>(metroObj.get_station_code(), metroObj));
+			metroMap.insert(std::pair<int, Metro>(metroObj.get_id(), metroObj));
 		}
 	}
 	else

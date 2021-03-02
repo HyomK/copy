@@ -16,14 +16,10 @@ int main()
     read_user_data();
     read_metro_data();
 
-	for(auto pair: userMap) {
-		cout << pair.first;
-	}
-
 	travel_map(userMap);
 	travel_map(metroMap);
 
-	find_item(userMap, "James");
+	find_item(userMap, "안종훈");
 	find_item(metroMap, "고속터미널");
 
 

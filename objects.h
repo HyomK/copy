@@ -12,14 +12,17 @@ class Schedule
 {
     private :
         string name; // 스케쥴 이름
+		int id;
         int start_time; // 시작 시간, HHMM 형식
         int end_time; // 종료 시간, HHMM 형식
-        int station_code; // 역 코드
+        string station_name; // 역 코드
     public :
-        Schedule(string param_name, int param_start_time, int param_end_time, int param_station_code);
-		int get_start_time;
-		int get_end_time;
-		int get_station_code;
+        Schedule(string param_name, int param_start_time, int param_end_time, string param_station_code);
+		string get_name();
+		int get_id();
+		int get_start_time();
+		int get_end_time();
+		string get_station_name();
         void print();
 };
 
@@ -27,31 +30,33 @@ class User
 {
     private :
         string name; // 유저 이름
+        string station_name; // 유저의 역, 스케쥴의 언제나 맨 처음이고 언제나 맨 마지막이다. 변하면 안됨
         int id; // 유저 아이디
-        int station_code; // 유저의 역, 스케쥴의 언제나 맨 처음이고 언제나 맨 마지막이다. 변하면 안됨
         list<Schedule> schedule_list; // 스케쥴의 백터
     public :
-        User(string param_string, int param_main_station_code);
+        User(string param_string, string param_main_station_code);
 		string get_name();
+		string get_station_name();
 		int get_id();
-		int get_station_code();
 		list<Schedule> get_schedule_list();
-        void print();
         void insert_schedule(Schedule schedule);
         string find_optimized_schedule_path();
+        void print();
 };
 
 class Departure
 {
 	private:
-		int destination_code;
+		string station_name;
+		int id;
 		int line;	
 		int departure_time;
 	public:	
-        Departure(int destination_code, int line, int departure_time);
-		int get_destination_code;
-		int get_line;
-		int get_departure_time;
+        Departure(string station_name, int line, int departure_time);
+		string get_station_name();
+		int get_id();
+		int get_line();
+		int get_departure_time();
         void print();
 };
 
@@ -59,16 +64,15 @@ class Metro
 {
     private :
         string station_name;
-        int station_code;
+        int id;
 		list<Departure> departure_list;
-        //vector<array<int,3>> departure_time;
     public :
         Metro(string param_station_name, int param_station_code);
+		string get_station_name();
 		int get_id();
-		int get_station_code();
-		int get_departure_list();
-        int find_maximum_time(int param_time);
+		list<Departure> get_departure_list();
 		void insert_departure(Departure departure);
+        int find_maximum_time(int param_time);
 		void print();
 };
 
